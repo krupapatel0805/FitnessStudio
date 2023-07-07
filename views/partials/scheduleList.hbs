@@ -1,0 +1,20 @@
+<section class="scheduleList">
+    <img src="{{this.img}}" alt="">
+    <div>
+        <p class="classDetails">
+            
+            {{this.className}}
+        
+            {{#if levelDisplay}}
+            - {{this.level}}
+            {{/if}}
+
+        <span> with </span>
+        {{this.instructorName}}
+        </p>
+
+        <p>{{this.classLength}}</p>
+
+        <button class="theButton" onclick="classDetails()">{{this.bookNow}}</button>
+    </div>
+</section>

@@ -1,0 +1,44 @@
+<section class="cart">
+    <h1>Checkout</h1>
+    <div class="checkout">
+        <div class="customerDetails">
+            <h2>customer details</h2>
+            <form action="/cart" method="post">
+                <input id="name" type="text" name="userNameInput" placeholder="Enter your name">
+                <input id="email" type="email" name="userEmailInput" placeholder="Enter your email">
+                <button id="verified"><span class="fa fa-star"></span>verified</button>
+            </form>
+        </div>
+
+        <div class="classSection">
+            <h2>your classes</h2>
+            <div class="yourClasses">
+                <div>
+                    <div>
+                        <p>Yoga with Ketty</p>
+                    </div>
+                    <button class="remove-btn">remove</button>
+                </div>
+                <div>
+                    <p>Zumba - Beginner with Paul</p>
+                    <button class="remove-btn">remove</button>
+                </div>
+                <div>
+                    <p>Aerobic - Intermediate with Mickel</p>
+                    <button class="remove-btn">remove</button>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="total">
+            <p>Subtotal: <span id="subtotal"></span></p>
+            <p>Tax: <span id="tax"></span></p>
+            <hr>
+            <p>Total: <span id="total"></span></p>
+            <button>Pay</button>
+        </div>
+
+    </div>
+</section>

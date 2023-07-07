@@ -1,0 +1,116 @@
+<div class="container">
+{{!-- <<<<<<< HEAD --}}
+   {{! Login Form }}
+   <div id="login-form" class="form">
+      <form action="/login" method="post">
+         <h2>Login</h2>
+         <input type="email" id="email-input" placeholder="Please enter your email" name="email"/>
+         <input type="password" id="password-input" placeholder="Please enter your password" name="password"/>
+         <button type="submit" id="login-button" formaction="/login">Login</button>
+         <p>Are you a new user?
+            <a href="#" id="create-account">Create Account</a>
+         </p>
+      </form>
+   </div>
+   {{! Signup Form }}
+   <div id="signup-form" class="form" style="display:none;">
+      <form action="/signup" method="post">
+         <h2>Create Account</h2>
+         <input type="text" id="name-input" placeholder="Please enter your name" />
+         <input type="email" id="signup-email-input" placeholder="Please enter your email" name="newEmail"/>
+         <input type="password" id="signup-password-input" placeholder="Please enter your password" name="newPassword" />
+         <input type="checkbox" id="membership-checkbox" value="yes" name="isMember"/>
+         <label>Sign up for $75 monthly plan</label>
+         <div class="formBtns">
+            <button type="submit" id="yes-button" formaction="/signup">Yes</button>
+            <button type="submit" id="no-button" formaction="/signup">No</button>
+         </div>
+      </form>
+   </div>
+=======
+	{{#if form}}
+		{{#if formIsLogin}}
+			{{! Login Form }}
+			<div id="login-form" class="form">
+				<form action="/login" method="post">
+					<h2>Login</h2>
+					<input
+						type="email"
+						id="login-email"
+						name="email"
+						placeholder="Please enter your email"
+					/>
+
+					<input
+						type="password"
+						id="login-password"
+						name="password"
+						placeholder="Please enter your password"
+					/>
+
+					{{#if message}}
+						<span class="errorMsg">{{message}}</span>
+					{{/if}}
+
+					<button type="submit" id="login-button">Login</button>
+					<p>Are you a new user?
+						<a href="/signup" id="create-account">Create Account</a>
+					</p>
+				</form>
+			</div>
+		{{else}}
+			{{! Signup Form }}
+			<div id="signup-form" class="form">
+				<form action="/signup" method="post">
+					<h2>Create Account</h2>
+					<input
+						type="text"
+						id="firstName"
+						name="firstName"
+						placeholder="Please enter your first name"
+						required
+					/>
+
+					<input
+						type="email"
+						id="signup-email"
+						name="newEmail"
+						placeholder="Please enter your email"
+						required
+					/>
+
+					<input
+						type="password"
+						id="signup-password"
+						name="newPassword"
+						placeholder="Please enter your password"
+						required
+					/>
+
+					{{#if message}}
+						<span class="errorMsg">{{message}}</span>
+					{{/if}}
+
+					<input type="checkbox" id="isMember" name="isMember" value="true" />
+					<label for="isMember">Sign up for $75 monthly plan</label>
+
+					<div class="formBtns">
+						<button
+							type="submit"
+							id="yesBtn"
+							name="submit"
+							value="yes"
+						>Yes</button>
+						<button
+							type="submit"
+							id="noBtn"
+							name="submit"
+							value="no"
+						>No</button>
+					</div>
+				</form>
+			</div>
+		{{/if}}
+	{{/if}}
+{{!-- >>>>>>> 8bd6997 (updated db, admin, login, css) --}}
+</div>
